@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">The Souk Mali</string>
+
+    <!--for Intro slider-->
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello Mali!</string>
+    <string name="slide_1_desc">The easiest way to order shop from your favourite E-commerce website!</string>
+
+    <string name="slide_2_title">Ordered Easily</string>
+    <string name="slide_2_desc">Ordered any kind of Dress and tools for your family and friends!</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+
+
+
+
+</resources>
