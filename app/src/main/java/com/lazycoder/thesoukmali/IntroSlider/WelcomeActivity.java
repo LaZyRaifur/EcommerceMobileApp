@@ -2,6 +2,7 @@ package com.lazycoder.thesoukmali.IntroSlider;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -21,6 +22,9 @@ import android.widget.TextView;
 import com.lazycoder.thesoukmali.MainActivity;
 import com.lazycoder.thesoukmali.R;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class WelcomeActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
@@ -32,8 +36,21 @@ public class WelcomeActivity extends AppCompatActivity {
     private PrefManager prefManager;
 
     @Override
+    protected void attachBaseContext(Context newBase) {
+//
+//        //17.04.19
+//        MultiDex.install(this);
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         super.onCreate(savedInstanceState);
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/Arkhip_font.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build());
 
         // Checking for first time launch - before calling setContentView()
         prefManager = new PrefManager(this);

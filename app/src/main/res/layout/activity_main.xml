@@ -6,9 +6,9 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:layout_gravity="end"
-        android:background="#DD2E852E"
+        android:background="#F7FC0B0B"
         android:gravity="end"
         android:minHeight="?attr/actionBarSize">
 
